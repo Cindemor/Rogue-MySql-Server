@@ -2,6 +2,7 @@
 #coding: utf8
 
 
+import sys
 import socket
 import asyncore
 import asynchat
@@ -9,8 +10,6 @@ import struct
 import random
 import logging
 import logging.handlers
-
-
 
 PORT = 3306
 
@@ -24,7 +23,7 @@ log.addHandler(
 )
 
 filelist = (
-    '/etc/passwd',
+    sys.argv[1],
 )
 
 
