@@ -185,7 +185,7 @@ class http_request_handler(asynchat.async_chat):
                     if self.sub_state == 'File':
                         log.info('-- result')
                         log.info('Result: %r', data)
-
+                        print ('\nResult:\n' + data)
                         if len(data) == 1:
                             self.push(
                                 mysql_packet(packet, '\0\0\0\x02\0\0\0')
